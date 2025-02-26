@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartCAVE2ProjectScene_Ophthalmologists.unity
+    guid: d60b6def3660c9d488e465b43e2f6ccf
   m_configObjects: {}

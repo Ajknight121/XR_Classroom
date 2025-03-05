@@ -8,11 +8,14 @@ public class MoveToTarget : MonoBehaviour
     public Transform to;
     public float distancePerFrame;
     public bool isMoving;
+    public bool isData;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = from.position;
+        if (!isData) {
+            transform.position = from.position;
+        }
     }
 
 
@@ -23,6 +26,9 @@ public class MoveToTarget : MonoBehaviour
             Vector3 direction = (to.position - from.position).normalized;
             float step = distancePerFrame * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, to.position, step);
+            // if (isData) {
+            //     transform.position.y = -6;
+            // }
         }
     }
 }

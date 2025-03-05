@@ -5,6 +5,7 @@ using UnityEngine;
 public class ServerController : MonoBehaviour
 {
     public GameObject locationView;
+    public GameObject data;
 
     void OnTriggerEnter(Collider other)
     {
@@ -12,6 +13,7 @@ public class ServerController : MonoBehaviour
         {
             print("ENTER Player");
             locationView.GetComponent<MoveToTarget>().isMoving = true;
+            data.GetComponent<MoveToTarget>().isMoving = true;
         }
     }
 

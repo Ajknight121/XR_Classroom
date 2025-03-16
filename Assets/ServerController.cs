@@ -13,6 +13,7 @@ public class ServerController : MonoBehaviour
         {
             print("ENTER Player");
             locationView.GetComponent<MoveToTarget>().isMoving = true;
+            locationView.GetComponent<MoveToTarget>().played = true;
             data.GetComponent<MoveToTarget>().isMoving = true;
         }
     }

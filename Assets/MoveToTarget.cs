@@ -9,11 +9,16 @@ public class MoveToTarget : MonoBehaviour
     public float distancePerFrame;
     public bool isMoving;
     public bool isData;
+    public bool played;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (!isData) {
+        played = false;
+        GetComponent<Animator>().StopPlayback();
+
+        if (!isData)
+        {
             transform.position = from.position;
         }
     }
@@ -22,13 +27,18 @@ public class MoveToTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isMoving) {
-            Vector3 direction = (to.position - from.position).normalized;
-            float step = distancePerFrame * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, to.position, step);
-            // if (isData) {
-            //     transform.position.y = -6;
-            // }
+        if (isMoving)
+        {
+            // Vector3 direction = (to.position - from.position).normalized;
+            // float step = distancePerFrame * Time.deltaTime;
+            // transform.position = Vector3.MoveTowards(transform.position, to.position, step);
+            // // if (isData) {
+            // //     transform.position.y = -6;
+            // // }
+            if (played)
+            {
+                GetComponent<Animator>().Play("New Animation", -1, 0f);
+            }
         }
     }
 }

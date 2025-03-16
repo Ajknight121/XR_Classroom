@@ -6,21 +6,21 @@ public class CreateOnGrab : MonoBehaviour
 {
     public float delay;
     public float maxDelay;
-    public GrabbableObject obj;
+    private GrabbableObject grabTarget;
     public GameObject spawnedPrefab;
     public Transform spawnLocation;
     // Start is called before the first frame update
     void Start()
     {
-        obj = GetComponent<GrabbableObject>();
-        Debug.Log(obj);
+        grabTarget = GetComponent<GrabbableObject>();
+        Debug.Log(grabTarget);
         delay = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (obj.grabbed && delay <= 0) {
+        if (grabTarget.grabbed && delay <= 0) {
             GameObject newInstance;
             newInstance = Instantiate(spawnedPrefab, spawnLocation.position,
             spawnLocation.rotation);

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HubClassroom.unity
+    guid: f246156c81e81444392af606b68f38fa
+  - enabled: 1
+    path: Assets/Scenes/Networking.unity
+    guid: 39737acd7165b17439a8aa4f7f085391
   m_configObjects: {}

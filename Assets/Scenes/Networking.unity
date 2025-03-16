@@ -5991,6 +5991,7 @@ MonoBehaviour:
   distancePerFrame: 24.8
   isMoving: 0
   isData: 0
+  played: 0
 --- !u!95 &425910746
 Animator:
   serializedVersion: 3
@@ -5999,7 +6000,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425910740}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 082b0d000e1117e49aef799bc04b59cd, type: 2}
   m_CullingMode: 0
@@ -6033,6 +6034,7 @@ MonoBehaviour:
   distancePerFrame: 40.3
   isMoving: 0
   isData: 1
+  played: 0
 --- !u!1001 &476018222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6648,6 +6650,7 @@ MonoBehaviour:
   distancePerFrame: 34.68
   isMoving: 0
   isData: 1
+  played: 0
 --- !u!1001 &819870610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8562,6 +8565,7 @@ MonoBehaviour:
   distancePerFrame: 24.67
   isMoving: 0
   isData: 0
+  played: 0
 --- !u!95 &1744884855
 Animator:
   serializedVersion: 3
@@ -8570,7 +8574,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744884849}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a6c9216b71286974c921126ca74dbf23, type: 2}
   m_CullingMode: 0
@@ -9305,16 +9309,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1235559894020893472, guid: 542475707c6b5644dac416d70a41eb31,
-        type: 3}
-      propertyPath: headTracker
-      value: 
-      objectReference: {fileID: 1414880794}
     - target: {fileID: 2717644653638251209, guid: 542475707c6b5644dac416d70a41eb31,
         type: 3}
       propertyPath: cameraController
       value: 
       objectReference: {fileID: 1477776056}
+    - target: {fileID: 1235559894020893472, guid: 542475707c6b5644dac416d70a41eb31,
+        type: 3}
+      propertyPath: headTracker
+      value: 
+      objectReference: {fileID: 1414880794}
     - target: {fileID: 9166429183120138366, guid: 542475707c6b5644dac416d70a41eb31,
         type: 3}
       propertyPath: m_Enabled
@@ -9516,6 +9520,7 @@ MonoBehaviour:
   distancePerFrame: 25.69
   isMoving: 0
   isData: 0
+  played: 0
 --- !u!95 &2024827547
 Animator:
   serializedVersion: 3
@@ -9524,7 +9529,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024827541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a0a67a6d8a2511044ac9eec84bc5197b, type: 2}
   m_CullingMode: 0
@@ -9818,6 +9823,7 @@ MonoBehaviour:
   distancePerFrame: 17.33
   isMoving: 0
   isData: 1
+  played: 0
 --- !u!1001 &2143418111
 PrefabInstance:
   m_ObjectHideFlags: 0

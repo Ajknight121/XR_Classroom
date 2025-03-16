@@ -12,8 +12,8 @@ public class DrawLine : MonoBehaviour
     void Start() {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 2; // Only two points needed
-        lineRenderer.startWidth = 1f;
-        lineRenderer.endWidth = 1f;
+        lineRenderer.startWidth = width;
+        lineRenderer.endWidth = width;
     }
 
     void Update() {

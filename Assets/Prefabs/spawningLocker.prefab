@@ -121,14 +121,14 @@ MonoBehaviour:
   centerOnWand: 0
   constraints: 0
   grabber: {fileID: 0}
-  showPointingOver: 1
+  showPointingOver: 0
   highlightScaler: 1.05
   defaultMesh: {fileID: 0}
-  useSimplifiedMesh: 0
+  useSimplifiedMesh: 1
   simpleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   pointingOverMaterial: {fileID: 2100000, guid: 2a6e178022e90be498acb517c9f1a51c,
     type: 2}
-  showTouchingOver: 1
+  showTouchingOver: 0
   touchingOverMaterial: {fileID: 2100000, guid: 2a6e178022e90be498acb517c9f1a51c,
     type: 2}
 --- !u!114 &8761781962584162441
@@ -145,7 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   maxDelay: 3
-  obj: {fileID: 2712736308060185909}
+  count: 0
+  prefabLifetime: 10.2
   spawnedPrefab: {fileID: 5030832035274492060, guid: e7b83d54ecd72b641a39b3fe0870de27,
     type: 3}
   spawnLocation: {fileID: 2839090056663949424}

@@ -6,6 +6,8 @@ public class CreateOnGrab : MonoBehaviour
 {
     public float delay;
     public float maxDelay;
+    public int count;
+    public float prefabLifetime;
     private GrabbableObject grabTarget;
     public GameObject spawnedPrefab;
     public Transform spawnLocation;
@@ -21,13 +23,22 @@ public class CreateOnGrab : MonoBehaviour
     void Update()
     {
         if (grabTarget.grabbed && delay <= 0) {
+            print("creating object");
             GameObject newInstance;
-            newInstance = Instantiate(spawnedPrefab, spawnLocation.position,
-            spawnLocation.rotation);
-            newInstance.GetComponent<Rigidbody>().AddForce(spawnLocation.forward * 50);
+            for (int i =0; i < count; i++) {
+                newInstance = Instantiate(spawnedPrefab, spawnLocation.position,spawnLocation.rotation);
+                newInstance.GetComponent<Rigidbody>().AddForce(spawnLocation.forward * 30);
+                StartCoroutine(DestroyObjectAfterTime(newInstance,prefabLifetime));
+            }
             
             delay = maxDelay;
         }
         delay -= 1 * Time.deltaTime;
+    }
+
+    private IEnumerator DestroyObjectAfterTime(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(obj);
     }
 }

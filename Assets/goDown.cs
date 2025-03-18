@@ -5,6 +5,7 @@ using UnityEngine;
 public class goDown : MonoBehaviour
 {
     public float speed = 1f;
+    public float stopYValue = -5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,9 @@ public class goDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y > 1f)
-            transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z);
+
+        if (transform.position.y <= stopYValue)
+            return;
+        transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z);
     }
 }

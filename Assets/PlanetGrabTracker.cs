@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlanetGrabTracker : MonoBehaviour
 {
     private Dictionary<string, GrabPlanet> planetComponents;
+    public GameObject blackHole;
 
     public bool earthGrabbed = false;
     public bool jupiterGrabbed = false;
@@ -15,6 +16,10 @@ public class PlanetGrabTracker : MonoBehaviour
     public bool venusGrabbed = false;
     public bool neptuneGrabbed = false;
     public bool sunGrabbed = false;
+
+    public float suckSpeed = 100.0f;
+    public float shrinkSpeed = 0.1f;
+    public float shrinkThreshold = 5.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,16 +36,13 @@ public class PlanetGrabTracker : MonoBehaviour
             { "Neptune", GameObject.Find("Neptune").GetComponent<GrabPlanet>() },
             { "Sun", GameObject.Find("Sun").GetComponent<GrabPlanet>() }
         };
+
+        blackHole = GameObject.Find("black hole");
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach (var planet in planetComponents)
-        {
-            Debug.Log($"{planet.Key} isGrabbed: {planet.Value.isGrabbed}");
-        }
-
         earthGrabbed = planetComponents["Earth"].isGrabbed;
         jupiterGrabbed = planetComponents["Jupiter"].isGrabbed;
         marsGrabbed = planetComponents["Mars"].isGrabbed;
@@ -50,5 +52,30 @@ public class PlanetGrabTracker : MonoBehaviour
         venusGrabbed = planetComponents["Venus"].isGrabbed;
         neptuneGrabbed = planetComponents["Neptune"].isGrabbed;
         sunGrabbed = planetComponents["Sun"].isGrabbed;
+
+        if (blackHole != null)
+        {
+            Vector3 blackHolePosition = blackHole.transform.position;
+
+            if (earthGrabbed && jupiterGrabbed && marsGrabbed && mercuryGrabbed && saturnGrabbed && uranusGrabbed && venusGrabbed && neptuneGrabbed && sunGrabbed)
+            {
+                foreach (var planet in planetComponents)
+                {
+                    Transform planetTransform = planet.Value.transform;
+                    planetTransform.position = Vector3.MoveTowards(planetTransform.position, blackHolePosition, suckSpeed * Time.deltaTime);
+
+                    if (Vector3.Distance(planetTransform.position, blackHolePosition) < shrinkThreshold)
+                    {
+                        planetTransform.localScale = Vector3.Lerp(planetTransform.localScale, Vector3.zero, shrinkSpeed * Time.deltaTime);
+                    }
+                }
+
+                Transform sunTransform = planetComponents["Sun"].transform;
+                if (sunTransform.localScale.x <= 0.3f && sunTransform.localScale.y <= 0.3f && sunTransform.localScale.z <= 0.3f)
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("HubClassroom");
+                }
+            }
+        }
     }
 }

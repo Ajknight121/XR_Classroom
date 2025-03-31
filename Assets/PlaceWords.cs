@@ -60,8 +60,8 @@ public class PlaceWords : MonoBehaviour
             // rotate not well implemented?
             AddColliderToWord(wordObject);
             wordObject.AddComponent<GrabbableObject>();
-            wordObject.GetComponent<GrabbableObject>().showTouchingOver = true;
-            wordObject.GetComponent<GrabbableObject>().showPointingOver = true;
+            wordObject.GetComponent<GrabbableObject>().showTouchingOver = false;
+            wordObject.GetComponent<GrabbableObject>().showPointingOver = false;
             wordObject.transform.rotation = transform.rotation;
             wordObject.transform.rotation = rotation;
         }

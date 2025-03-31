@@ -72,7 +72,7 @@ public class GrabbableObject : CAVE2Interactable {
     new MeshRenderer renderer;
 
     [SerializeField]
-    bool showPointingOver = true;
+    public bool showPointingOver = true;
 
     [SerializeField]
     float highlightScaler = 1.05f;
@@ -92,7 +92,7 @@ public class GrabbableObject : CAVE2Interactable {
     Color originalPointingMatColor;
 
     [SerializeField]
-    bool showTouchingOver = true;
+    public bool showTouchingOver = true;
 
     [SerializeField]
     Material touchingOverMaterial = null;

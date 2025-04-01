@@ -7303,6 +7303,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rockwell-Alphabet
       objectReference: {fileID: 0}
+    - target: {fileID: 4202234574582361325, guid: 30256c971d8b88b41b6b32f46717c6b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 867523247729434366, guid: 30256c971d8b88b41b6b32f46717c6b9,
         type: 3}
       propertyPath: m_LocalPosition.x

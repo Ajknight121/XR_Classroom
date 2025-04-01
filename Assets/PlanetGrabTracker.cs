@@ -6,6 +6,7 @@ public class PlanetGrabTracker : MonoBehaviour
 {
     private Dictionary<string, GrabPlanet> planetComponents;
     public GameObject blackHole;
+    public string newSceneName;
 
     public bool earthGrabbed = false;
     public bool jupiterGrabbed = false;
@@ -73,7 +74,7 @@ public class PlanetGrabTracker : MonoBehaviour
                 Transform sunTransform = planetComponents["Sun"].transform;
                 if (sunTransform.localScale.x <= 0.3f && sunTransform.localScale.y <= 0.3f && sunTransform.localScale.z <= 0.3f)
                 {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("HubClassroom");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(newSceneName);
                 }
             }
         }

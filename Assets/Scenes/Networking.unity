@@ -6089,6 +6089,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a2cd54f8178d0a945ad1ce0a5968ab4f, type: 2}
+    - target: {fileID: 1967801861694425772, guid: d2e6a2215c4baab44a9e490da88f143c,
+        type: 3}
+      propertyPath: sceneTitle
+      value: Ophthalmologist
+      objectReference: {fileID: 0}
     - target: {fileID: 6315530628104935178, guid: d2e6a2215c4baab44a9e490da88f143c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8706,16 +8711,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011884111856, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 418049647, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 418049648, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000011884111856, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

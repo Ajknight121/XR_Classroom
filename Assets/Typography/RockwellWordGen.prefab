@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6099877338718314474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6099877338718314476}
+  - component: {fileID: 6099877338718314477}
+  m_Layer: 0
+  m_Name: RockwellWordGen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6099877338718314476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099877338718314474}
+  m_LocalRotation: {x: -0, y: -0.18995261, z: -0, w: -0.9817933}
+  m_LocalPosition: {x: 17.273, y: 2.62, z: 4.031643}
+  m_LocalScale: {x: 0.9825992, y: 1, z: 0.8923233}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -338.1, z: 0}
+--- !u!114 &6099877338718314477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099877338718314474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e2837eef2322746a72e996e7fd98ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabLetters:
+  - {fileID: 3848080491999878930, guid: 51fee482cefcfa64ba90d99944531d62, type: 3}
+  - {fileID: 4065289574432913666, guid: 0f375d2cfb697f5419415e09e5a6adc4, type: 3}
+  - {fileID: 1846023961144968391, guid: 35e2772620e3596489c1393ba8589f34, type: 3}
+  - {fileID: 681564523582417029, guid: a0d984c08da877e45800ff0b2893e331, type: 3}
+  - {fileID: 441125635344676069, guid: e1984f06e3cfb5d429d8617c57811f08, type: 3}
+  - {fileID: 4265747928307358055, guid: 33b9eb072c8ff3945b3345012bcc6868, type: 3}
+  - {fileID: 4427834386854309360, guid: c530743aa5da82e47902dc1ea302d69b, type: 3}
+  - {fileID: 7502999062928814864, guid: 8bf55e9514417ae4d94ddc1cf32680de, type: 3}
+  - {fileID: 3472934182408123988, guid: 2f7955a0e234a6d42972a43fd176b3d6, type: 3}
+  - {fileID: 970756028157139628, guid: 1ddec4e924bdb2840a5367cbe9a5496b, type: 3}
+  - {fileID: 3341752216838632707, guid: 9168125e7efe3fe4a8f51b612759bd92, type: 3}
+  - {fileID: 6936801440083097193, guid: 02c0091ad002a2b4594c5f5fd7187cbc, type: 3}
+  - {fileID: 3529178350426143353, guid: 488aeb67de7017d4bb5e2f209f71c605, type: 3}
+  - {fileID: 8868996310168228870, guid: f5796acc265a47e4b9543e8e7fc27664, type: 3}
+  - {fileID: 4491429773540830818, guid: a3f2b30bb01b78640946d3586ddf5869, type: 3}
+  - {fileID: 4863876933073755619, guid: df9487d428322c849a6e607bf68c2fd2, type: 3}
+  - {fileID: 8505255076187843065, guid: 390efcc8108216f4282908d6b8117cc8, type: 3}
+  - {fileID: 6842139504148125753, guid: f90f0e70d56ac0b4192c2d0a5ddace86, type: 3}
+  - {fileID: 2979730980206689435, guid: 04c57a070187fc64fad0b6ad80f2b18c, type: 3}
+  - {fileID: 6546115883751399889, guid: 885aab57a778acb4cb591739f3480565, type: 3}
+  - {fileID: 8854121140825745743, guid: b40a65e7ed88f154ea5ca4d394881dea, type: 3}
+  - {fileID: 6322858156643164322, guid: e93bee7b2d5c46e46b7ab559d9715689, type: 3}
+  - {fileID: 3236787737970418648, guid: 0420e83b31b2d5e45bb4d98239815ad5, type: 3}
+  - {fileID: 5800000831658733610, guid: 66f82d4954faaee448284b7af07d205d, type: 3}
+  - {fileID: 7186508744324957811, guid: 18617268a58499c49812519ebabf9170, type: 3}
+  - {fileID: 2502261754756140303, guid: ab4b80226b8dd2942ba0d1b1387ed5a6, type: 3}
+  words:
+  - ASTRONOMY
+  - SPACE
+  - SCIENCE
+  - CHEMISTRY
+  - OBSERVATION
+  scale: 109
+  rotation: {x: 0, y: 200, z: 0, w: 0}
+  wordOffset: {x: 10, y: 0, z: 10}
+  currWordOffset: {x: 0, y: 0, z: 0}
+  letterSpacing: 1.37

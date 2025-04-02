@@ -11,43 +11,54 @@ public class PlaceWords : MonoBehaviour
     public Vector3 wordOffset = new Vector3(10f, 0f, 10f);
     public Vector3 currWordOffset = new Vector3(0f, 0f, 0f);
     public float letterSpacing = 1.1f;
-
+    public bool hasGravity = false;
+    public Dictionary<char, int> letterToIndex = new Dictionary<char, int>();
     void Start()
     {
-        Dictionary<char, int> letterToIndex = new Dictionary<char, int>();
-
         // Populate dictionary (A-Z mapped to 0-25)
         for (int i = 0; i < 26; i++)
         {
             letterToIndex.Add((char)('A' + i), i);
         }
+        Physics.IgnoreLayerCollision(8, 9, true);
+    }
 
+    public void PlaceAllWords(List<string> words)
+    {
+        
+        
+        currWordOffset = Vector3.zero;
         // Instantiate words with spacing
         foreach (var word in words)
         {
+            print(word);
             float xOffset = 0f; // Reset X offset for each word
             
             // Create an empty parent object for the word
             GameObject wordObject = new GameObject(word);
-            wordObject.transform.position = transform.position + currWordOffset;
             
+            wordObject.transform.position = transform.position + currWordOffset;
             wordObject.transform.SetParent(transform); // Parent to this script’s GameObject
+            wordObject.layer = LayerMask.NameToLayer("TextGap");
+            
+            print(transform.position);
             
             // Phsyics on the word
             Rigidbody wordRigidbody = wordObject.AddComponent<Rigidbody>();
             wordRigidbody.isKinematic = false; // Let the physics system control this object
             wordRigidbody.mass = 2.0f;
-            wordRigidbody.drag = 1.17f;
+            wordRigidbody.drag = 1.87f;
             wordRigidbody.angularDrag = .5f;
-            wordRigidbody.useGravity = false;
+            wordRigidbody.useGravity = hasGravity;
             
             foreach (var letter in word)
             {
+                
                 if (letterToIndex.ContainsKey(letter)) // Ensure valid letter
                 {
                     Vector3 spawnPosition = wordObject.transform.position + new Vector3(xOffset, 0, 0);
                     GameObject letterObj = Instantiate(prefabLetters[letterToIndex[letter]], spawnPosition, Quaternion.identity, wordObject.transform);
-
+                    letterObj.layer = LayerMask.NameToLayer("TextGap");
                     letterObj.transform.localScale = new Vector3(scale, scale, scale);
 
                     xOffset -= letterSpacing; // Increase offset for next letter

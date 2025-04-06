@@ -15,7 +15,7 @@ public class wordSpawner : MonoBehaviour
     public Vector3 currWordOffset = new Vector3(0f, 0f, 0f);
     public float letterSpacing = 1.1f;
     public PlaceWords placewords;
-    
+    public float lifetime;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +32,11 @@ public class wordSpawner : MonoBehaviour
             List<string> wordSpawn = new List<string>();
             
             wordSpawn.AddRange(words[index].Split(' '));
-            placewords.PlaceAllWords(wordSpawn);
+            placewords.PlaceAllWords(wordSpawn, lifetime);
             index++;
         }
     }
     
-   
+    
 }
 

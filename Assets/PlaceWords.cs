@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaceWords : MonoBehaviour
@@ -23,7 +24,7 @@ public class PlaceWords : MonoBehaviour
         Physics.IgnoreLayerCollision(8, 9, true);
     }
 
-    public void PlaceAllWords(List<string> words)
+    public void PlaceAllWords(List<string> words, float lifetime)
     {
         
         
@@ -75,6 +76,7 @@ public class PlaceWords : MonoBehaviour
             wordObject.GetComponent<GrabbableObject>().showPointingOver = false;
             wordObject.transform.rotation = transform.rotation;
             wordObject.transform.rotation = rotation;
+            StartCoroutine(DestroyObjectAfterTime(wordObject,lifetime));
         }
     }
 
@@ -97,5 +99,11 @@ public class PlaceWords : MonoBehaviour
         boxCollider.center = bounds.center - wordObject.transform.position;
         boxCollider.size = bounds.size;
         
+    }
+    
+    private IEnumerator DestroyObjectAfterTime(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(obj);
     }
 }

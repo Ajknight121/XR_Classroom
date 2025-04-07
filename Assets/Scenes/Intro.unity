@@ -307,6 +307,7 @@ MonoBehaviour:
   - SPECULATIVE INVESTOR
   - MULTILEVEL MARKETING
   - SCAMMER
+  - OFFICE WORKER
   scale: 1
   wordOffset: {x: 0, y: 0, z: 0}
   currWordOffset: {x: 0, y: 0, z: 0}
@@ -393,10 +394,12 @@ MonoBehaviour:
   index: 0
   words:
   - GAMBLER
-  - SERVANT
+  - RESELLER
   - WAGIE
   - NFT INVESTOR
   - SCAMMER
+  - DROPSHIPPER
+  - SERVANT
   scale: 1
   wordOffset: {x: 0, y: 0, z: 0}
   currWordOffset: {x: 0, y: 0, z: 0}
@@ -649,7 +652,7 @@ PrefabInstance:
     - target: {fileID: 6099877338718314476, guid: c338a6402bb62c94685d9ab011a7d2ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -59.59
+      value: -58.45
       objectReference: {fileID: 0}
     - target: {fileID: 6099877338718314476, guid: c338a6402bb62c94685d9ab011a7d2ac,
         type: 3}
@@ -977,7 +980,7 @@ PrefabInstance:
     - target: {fileID: 6099877338718314476, guid: c338a6402bb62c94685d9ab011a7d2ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -61.5
+      value: -60.36
       objectReference: {fileID: 0}
     - target: {fileID: 6099877338718314476, guid: c338a6402bb62c94685d9ab011a7d2ac,
         type: 3}
@@ -1624,7 +1627,7 @@ PrefabInstance:
     - target: {fileID: 6099877338718314476, guid: c338a6402bb62c94685d9ab011a7d2ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -58.34
+      value: -57.2
       objectReference: {fileID: 0}
     - target: {fileID: 6099877338718314476, guid: c338a6402bb62c94685d9ab011a7d2ac,
         type: 3}

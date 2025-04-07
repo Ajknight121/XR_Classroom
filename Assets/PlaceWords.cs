@@ -7,6 +7,7 @@ public class PlaceWords : MonoBehaviour
     public List<GameObject> prefabLetters;
     public List<string> words = new List<string>();
     
+    public bool onStart = false;
     public float scale = 1f;
     public Quaternion rotation = new Quaternion();
     public Vector3 wordOffset = new Vector3(10f, 0f, 10f);
@@ -22,6 +23,10 @@ public class PlaceWords : MonoBehaviour
             letterToIndex.Add((char)('A' + i), i);
         }
         Physics.IgnoreLayerCollision(8, 9, true);
+        if (onStart)
+        {
+            PlaceAllWords(words, 999);
+        }
     }
 
     public void PlaceAllWords(List<string> words, float lifetime)

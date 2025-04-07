@@ -33,7 +33,7 @@ public class GrabbableObject : CAVE2Interactable {
     public enum HoldingStyle { ButtonPress, ButtonHold };
 
     [SerializeField]
-    bool grabbed;
+    public bool grabbed;
 
     [SerializeField]
     CAVE2.Button grabButton = CAVE2.Button.Button3;
@@ -72,7 +72,7 @@ public class GrabbableObject : CAVE2Interactable {
     new MeshRenderer renderer;
 
     [SerializeField]
-    bool showPointingOver = true;
+    public bool showPointingOver = true;
 
     [SerializeField]
     float highlightScaler = 1.05f;
@@ -92,7 +92,7 @@ public class GrabbableObject : CAVE2Interactable {
     Color originalPointingMatColor;
 
     [SerializeField]
-    bool showTouchingOver = true;
+    public bool showTouchingOver = true;
 
     [SerializeField]
     Material touchingOverMaterial = null;
@@ -197,9 +197,12 @@ public class GrabbableObject : CAVE2Interactable {
 
     void FixedUpdate()
     {
+        Rigidbody body = GetComponent<Rigidbody>();
         if( grabbed )
         {
-            previousPositions.Enqueue(GetComponent<Rigidbody>().position);
+            if (body) {
+                previousPositions.Enqueue(body.position);
+            }
 
             // Save only the last 5 frames of positions
             if(previousPositions.Count > 5)
@@ -213,14 +216,16 @@ public class GrabbableObject : CAVE2Interactable {
             for (int i = 0; i < previousPositions.Count; i++ )
             {
                 Vector3 s1 = (Vector3)previousPositions.Dequeue();
-                Vector3 s2 = GetComponent<Rigidbody>().position;
+                Vector3 s2 = body.position;
                 
                 if ( previousPositions.Count > 0 )
                     s2 = (Vector3)previousPositions.Dequeue();
                 throwForce += (s2 - s1);
             }
-            GetComponent<Rigidbody>().AddForce(throwForce * 10, ForceMode.Impulse);
-            wasGrabbed = false;
+            if (body) {
+                body.AddForce(throwForce * 10, ForceMode.Impulse);
+                wasGrabbed = false;
+            }
         }
     }
 

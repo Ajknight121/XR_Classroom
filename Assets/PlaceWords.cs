@@ -14,6 +14,7 @@ public class PlaceWords : MonoBehaviour
     public Vector3 currWordOffset = new Vector3(0f, 0f, 0f);
     public float letterSpacing = 1.1f;
     public bool hasGravity = false;
+    public Material material;
     public Dictionary<char, int> letterToIndex = new Dictionary<char, int>();
     void Start()
     {
@@ -66,7 +67,10 @@ public class PlaceWords : MonoBehaviour
                     GameObject letterObj = Instantiate(prefabLetters[letterToIndex[letter]], spawnPosition, Quaternion.identity, wordObject.transform);
                     letterObj.layer = LayerMask.NameToLayer("TextGap");
                     letterObj.transform.localScale = new Vector3(scale, scale, scale);
-
+                    if (material)
+                    {
+                        letterObj.GetComponent<Renderer>().material = material;
+                    }
                     xOffset -= letterSpacing; // Increase offset for next letter
                 }
             }

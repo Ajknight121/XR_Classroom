@@ -69,7 +69,7 @@ public class PlaceWords : MonoBehaviour
                     letterObj.transform.localScale = new Vector3(scale, scale, scale);
                     if (material)
                     {
-                        letterObj.GetComponent<Renderer>().material = material;
+                        ApplyMaterial(letterObj.transform);
                     }
                     xOffset -= letterSpacing; // Increase offset for next letter
                 }
@@ -108,6 +108,20 @@ public class PlaceWords : MonoBehaviour
         boxCollider.center = bounds.center - wordObject.transform.position;
         boxCollider.size = bounds.size;
         
+    }
+    
+    void ApplyMaterial(Transform parent)
+    {
+        Renderer renderer = parent.GetComponent<Renderer>();
+        if (renderer)
+        {
+            renderer.material = material;
+        }
+
+        foreach (Transform child in parent)
+        {
+            ApplyMaterial(child);
+        }
     }
     
     private IEnumerator DestroyObjectAfterTime(GameObject obj, float delay)

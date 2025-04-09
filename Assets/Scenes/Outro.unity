@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7832,7 +7832,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274152860}
-  m_LocalRotation: {x: -0.047187556, y: 0.9710336, z: -0.15320681, w: -0.17718595}
+  m_LocalRotation: {x: -0.011907023, y: 0.98230547, z: 0.038137916, w: -0.18297471}
   m_LocalPosition: {x: 24.888, y: -5.152, z: 23.994}
   m_LocalScale: {x: 1.00111, y: 1, z: 1.00111}
   m_Children:
@@ -7850,7 +7850,7 @@ Transform:
   - {fileID: 1373013711}
   m_Father: {fileID: 255012674}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 18.316, y: -159.68102, z: -2.255}
+  m_LocalEulerAnglesHint: {x: -4.0470004, y: -158.82101, z: -2.1460001}
 --- !u!1 &275681738
 GameObject:
   m_ObjectHideFlags: 0
@@ -16061,7 +16061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644198611}
   m_LocalRotation: {x: -0.044757385, y: 0.96417075, z: -0.16913226, w: -0.1994139}
-  m_LocalPosition: {x: 30.35, y: -5.72, z: 32.86}
+  m_LocalPosition: {x: 30.01, y: -3.62, z: 32.17}
   m_LocalScale: {x: 1.0011097, y: 1, z: 1.0011098}
   m_Children:
   - {fileID: 807580777}
@@ -30776,11 +30776,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1166248649288952179, guid: 2666eb5eef63b784aa19678bd1de7fbc,
-        type: 3}
-      propertyPath: m_CookingOptions
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 6611055028762579221, guid: 2666eb5eef63b784aa19678bd1de7fbc,
         type: 3}
       propertyPath: m_Materials.Array.data[3]
@@ -30790,6 +30785,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166248649288952179, guid: 2666eb5eef63b784aa19678bd1de7fbc,
+        type: 3}
+      propertyPath: m_CookingOptions
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2666eb5eef63b784aa19678bd1de7fbc, type: 3}

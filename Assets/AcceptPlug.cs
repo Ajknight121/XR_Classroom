@@ -6,6 +6,8 @@ public class AcceptPlug : MonoBehaviour
 {
     public GameObject locationView;
     public GameObject data;
+    public AudioSource tickingSource;
+    public AudioSource confirmSource;
 
     void OnCollisionEnter(Collision other)
     {
@@ -17,6 +19,8 @@ public class AcceptPlug : MonoBehaviour
             // other.GetComponent<GrabbableObject>().SetActive(false);
             other.gameObject.GetComponent<Rigidbody>().useGravity = false;
             other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            confirmSource.Play();
+            tickingSource.Stop();
         }
     }
 

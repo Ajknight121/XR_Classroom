@@ -12449,7 +12449,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 84cd5d6c3eae78348814f8b74c9b8b8a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fa0e7dbb6ec4e20448ebcca9e90ac990, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -13637,7 +13637,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 45a79ec344b296e49b934773c45015ec, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ead1521030b479242b100108ddc1143c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
@@ -14814,16 +14814,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.0067
       objectReference: {fileID: 0}
-    - target: {fileID: 1235559894020893472, guid: 542475707c6b5644dac416d70a41eb31,
-        type: 3}
-      propertyPath: headTracker
-      value: 
-      objectReference: {fileID: 1414880794}
     - target: {fileID: 2717644653638251209, guid: 542475707c6b5644dac416d70a41eb31,
         type: 3}
       propertyPath: cameraController
       value: 
       objectReference: {fileID: 1477776056}
+    - target: {fileID: 1235559894020893472, guid: 542475707c6b5644dac416d70a41eb31,
+        type: 3}
+      propertyPath: headTracker
+      value: 
+      objectReference: {fileID: 1414880794}
     - target: {fileID: 9166429183120138366, guid: 542475707c6b5644dac416d70a41eb31,
         type: 3}
       propertyPath: m_Enabled

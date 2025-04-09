@@ -11,6 +11,7 @@ public class AudioOnCollide : MonoBehaviour
     public float maxDelay = 0.5f;
     public float currentDelay = 0;
 
+    public bool loop = false;
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("TextGap"))
@@ -37,5 +38,10 @@ public class AudioOnCollide : MonoBehaviour
     void Update()
     {
         currentDelay -= Time.deltaTime;
+        if (loop && currentDelay <= 0)
+        {
+            currentDelay = maxDelay;
+            audioSource.Play();
+        }
     }
 }
